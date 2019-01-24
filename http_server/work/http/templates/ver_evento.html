@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Boletos Ecuador</title>
+</head>
+
+<body style="margin:0px; font-family: 'Arial', Times, serif;">
+	<nav style="width: 100%; height: 40px; background-color: gray; display: flex;">
+		<a href="/index/" style="display: flex; text-decoration: none; color: white;">
+			<h3 style="margin: auto 0px auto 20px;">Boletos Ecuador</h3>
+		</a>
+		<h3 style="margin: auto 20px auto auto; color: white;">Bienvenido, Usuario</h3>
+	</nav>
+	<section style="display: flex;">
+		<div style="display: block; margin: auto;">
+			<h1 style="margin-left: 25px;"><b>{{ .Nombre  }}</b></h1>
+			<h2 style="margin-left: 25px;">Fecha: {{ .Fecha  }}</h2>
+		</div>
+	</section>
+	<section style="display: flex;">
+		<div style="display: block; margin: auto;">
+                        <h1 style="margin-left: 25px;"><u>Comprar Boletos</u></h1>
+                        <div style="display: flex;">
+				<div>
+                                	<input type="checkbox" value="A1">
+					<h6 style="margin-top: 2px;">A1</h6>
+				</div>
+                                <div>
+                                        <input type="checkbox" value="A1">
+                                        <h6 style="margin-top: 2px;">A2</h6>
+                                </div>
+                                <div>
+                                        <input type="checkbox" value="A1">
+                                        <h6 style="margin-top: 2px;">A3</h6>
+                                </div>
+			</div>
+                        <div style="display: flex;">
+                                <div>
+                                        <input type="checkbox" value="A1">
+                                        <h6 style="margin-top: 2px;">B1</h6>
+                                </div>
+                                <div>
+                                     	<input type="checkbox" value="A1">
+                                        <h6 style="margin-top: 2px;">B2</h6>
+                                </div>
+                                <div>
+                                        <input type="checkbox" value="A1">
+                                        <h6 style="margin-top: 2px;">B3</h6>
+                                </div>
+                        </div>
+
+			<button>Comprar</button>
+                </div>
+	</section>
+</body>
+
+</html>

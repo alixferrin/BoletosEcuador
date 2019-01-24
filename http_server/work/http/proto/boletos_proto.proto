@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.routeguide";
+option java_outer_classname = "RouteGuideProto";
+
+package proto;
+
+service RouteGuide {
+  rpc GetEventos(Evento) returns (stream Evento) {}
+}
+
+message Evento {
+  string venue = 1;
+  string nombre = 2;
+  string fecha = 3;
+}

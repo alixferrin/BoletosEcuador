@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Boletos Ecuador</title>
+</head>
+
+<body style="margin:0px; font-family: 'Arial', Times, serif;">
+	<nav style="width: 100%; height: 40px; background-color: gray; display: flex;">
+		<a href="/index/" style="display: flex; text-decoration: none; color: white;">
+			<h3 style="margin: auto 0px auto 20px;">Boletos Ecuador</h3>
+		</a>
+		<h3 style="margin: auto 20px auto auto; color: white;">Bienvenido, Usuario</h3>
+	</nav>
+	<section style="display: flex;">
+		<div style="display: block; margin: auto;">
+			<h2 style="margin-left: 25px;">Eventos:</h2>
+			<ul>
+			{{range $val := .}}
+     				<li><a href="/evento/{{$val.Id}}">{{printf "%s" $val.Nombre}}</a></li>
+			{{end}}
+			</ul>
+		</div>
+	</section>
+</body>
+
+</html>
