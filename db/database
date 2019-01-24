@@ -1,0 +1,44 @@
+CREATE TABLE IF NOT EXISTS `BoletosEcuador`.`Asiento` (
+  `idasiento` INT NOT NULL,
+  `idvenue` VARCHAR(45) NULL,
+  `tipoAsiento` VARCHAR(45) NULL,
+  PRIMARY KEY (`idasiento`),
+  CONSTRAINT `idvenue`
+    FOREIGN KEY ()
+    REFERENCES `BoletosEcuador`.`Venue` ()
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+
+CREATE TABLE IF NOT EXISTS `BoletosEcuador`.`Boleto` (
+  `idBoleto` INT NOT NULL,
+  `evento` VARCHAR(45) NULL,
+  `usuario` VARCHAR(45) NULL,
+  `asiento` VARCHAR(45) NULL,
+  PRIMARY KEY (`idBoleto`))
+ENGINE = InnoDB
+
+CREATE TABLE IF NOT EXISTS `BoletosEcuador`.`Evento` (
+  `idEvento` INT NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `idvenue` VARCHAR(45) NOT NULL,
+  `fecha` DATE NOT NULL,
+  PRIMARY KEY (`idEvento`))
+ENGINE = InnoDB
+
+CREATE TABLE IF NOT EXISTS `BoletosEcuador`.`Usuario` (
+  `idUsuario` INT NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(45) NOT NULL,
+  `dob` DATE NOT NULL,
+  `telefono` VARCHAR(45) NOT NULL,
+  `Usuariocol` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idUsuario`))
+ENGINE = InnoDB
+
+CREATE TABLE IF NOT EXISTS `BoletosEcuador`.`Venue` (
+  `idvenue` INT NOT NULL,
+  `totalAsientos` INT NULL,
+  PRIMARY KEY (`idvenue`))
+ENGINE = InnoDB
